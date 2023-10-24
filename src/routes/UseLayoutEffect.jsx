@@ -5,6 +5,8 @@ const LayoutEffectComponent = () => {
   const [height, setHeight] = useState(0);
   const el = useRef();
 
+  // se comporta de forma sincrona, es decir, se ejecuta tan pronto termina el renderizado del componente
+  // a diferencia de useEffect que se ejecuta de forma asincrona
   useLayoutEffect(() => {
     setWidth(el.current.clientWidth);
     setHeight(el.current.clientHeight);

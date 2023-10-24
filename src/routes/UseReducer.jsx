@@ -5,6 +5,8 @@ const limit100 = (num, max) => (num < 0 ? 0 : num > max ? max : num);
 
 const step = 20;
 
+// Como el reducer de Redux... sería la forma de reemplazar redux usando solo react
+// Función que toma un pedacito del estado que le envían y ejecuta una acción sobre el mismo
 const reducer = (state, action) => {
   switch (action.type) {
     case 'INCREMENT_H':
@@ -24,6 +26,7 @@ const reducer = (state, action) => {
   }
 };
 
+// useReducer cumple el mismo objetivo que useState
 const UseReducerComponent = () => {
   const [{ h, s, l }, dispatch] = useReducer(reducer, { h: 50, s: 50, l: 50 });
   return (

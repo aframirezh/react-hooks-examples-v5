@@ -1,3 +1,6 @@
+// Se usa más que todo para resolver problemas de performance
+// Hace lo mismo que useMemo
+
 import { useEffect, useState, useCallback } from 'react';
 import UseRefComponent from './UseRef';
 

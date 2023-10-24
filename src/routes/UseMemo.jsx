@@ -1,5 +1,12 @@
+// Se usa más que todo para resolver problemas de performance
+// Hace lo mismo que useCallback
+
 import { useEffect, useState, useMemo } from 'react';
 import expensiveMathOperation from './expensiveMathOperation';
+
+// esta funcion ejecuta fibonacci un numero especifico de veces haciendola un calculo
+// matematico muy costoso. Por encodeURI, se ejecuta dentro de useMemo para que no se re renderice 
+// con cada ejecucion de la funcion y la animación no se vuelva lenta
 
 export default function Home() {
   const [count, setCount] = useState(35);
